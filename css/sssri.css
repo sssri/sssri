@@ -1,0 +1,450 @@
+ 
+.page {
+  margin: 0 auto;
+  width: 960px;
+}
+
+
+header,
+main,
+aside {
+	display: block;
+}
+body{
+	border:0;
+	margin:0;
+	padding:0;
+}
+
+header 
+ {
+	background:  #303030;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+.nav a ,
+ul a{
+	color: white;  /* 被下拉连接默认为白色*/
+	text-decoration: none;
+	font-family:Microsoft YaHei;
+	font-size: 100%; 
+}
+
+.logo,
+.social-sites,
+ nav{
+	 border:1px solid #303030;  /*边框与背景颜色一样*/
+	display: block;
+}
+
+.logo{
+	float:left;
+	margin-left:10px;
+	margin-top:0;
+}
+
+.social-sites li  {	
+    display: inline-block;
+}
+
+.social-sites{
+	padding-bottom:0px;
+	padding-top:20px;
+	padding-right:0px;
+	padding-left:160px;
+	margin-right:10px;
+	margin-left:500px;
+	margin-top:0;
+}
+
+.social-sites{
+	font-size:0.85em;
+	font-family: SimSun;
+}
+
+nav{
+	padding-bottom:30px;
+	padding-top:0px;
+	padding-left:-10px;
+	margin-right:2px;
+}
+
+.nav li,
+.nav li li{
+	 
+	list-style: none;
+	padding-right:0.5em;
+	padding-left:0;
+	margin-right:20px;
+ 
+}
+
+.nav li:first-child {
+   margin-left:-30px;
+}
+
+.nav li li:first-child {
+  margin-left: 0px;
+}
+
+.submenu{
+	background-color:#303030;
+		-webkit-border-radius: 6px 6px 0 0; /* 倒角 */
+          border-radius: 6px 6px 0 0; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+
+}
+
+
+.nav li {
+	float: left; /* CSS中float:left 表示向左浮动，比如多个div在一个页面上，默认情况是：一行一个div，
+	                但是只要在div的css中使用float：left，可以使一行有多个div，这样可以把网页划分成很多块，
+					但是使用该属性会影响后面的元素，所有如果后面的div不想再被影响，可以使用clear:both；
+					可以理解为清除float:left和float:right的影响，返回到默认状态。像<ul><li></li></ul>也可以这么使用，
+					做导航菜单基本上有这个元素,使用float:left使其横向显示。*/		
+  	-webkit-border-radius: 6px 6px 0 0; /* 倒角 */
+          border-radius: 6px 6px 0 0; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+					
+}
+
+.nav li a:hover,
+.nav li:hover > a {
+	color: #9370D8;  /* 被下拉连接点击时为蓝色*/
+}
+
+.nav .submenu {
+	margin-left: -10px;
+	padding-top: 5px;
+	padding-left:10px;
+	padding-right:5px;
+	padding-bottom:10px;
+
+	left: -999em; /* 默认隐藏子菜单画面以外的所以游客看不到它 */
+	position: absolute;
+	z-index: 1000;
+}
+
+.nav li:hover .submenu {
+	display: block; /* for older versions of IE  旧版本IE */
+	left: auto; /* 显示子菜单,当鼠标停留在父元素上时，让子菜单回到自然状态 */
+}
+
+.nav .submenu li {
+	float: none;
+	font-size: .875em;
+	margin-top: .5em;
+	width: auto;
+}
+/*---------------------------------------------------------------------------------*/
+main{
+	display:block;
+	width:620px;
+	float:left;
+}
+
+
+.post-blurb{
+	border:1px solid #A9A9A9;
+	padding:5px;
+	width: 300px;
+	font-size:0.8em;
+	color:#a0a0a0;
+ 
+}
+
+.post-blurb a{
+    text-decoration:none;
+}
+
+
+.post-blurb h3{
+	font-weight:bold;
+	margin-top:8px;
+}
+
+.post-blurb h3 a:link{
+	color:black;
+}
+
+.post-blurb h3 a:visited{
+	color:black;
+}
+
+.post-blurb h3 a:hover{
+	color:red;
+}
+
+.post-blurb p{
+	font-family:Microsoft YaHei;
+}
+
+.post-blurb p a:link{
+	color:black;
+}
+.post-blurb p a:visited{
+	color:black;
+}
+.post-blurb p a:hover{
+	color:red;
+}
+.post1{
+	display: block;
+	width:620px;
+	margin-top:10px;
+	margin-bottom:20px;
+}
+
+.post-blurb {
+	float: right;
+}
+
+
+.post2{
+	display: block;
+	border:1px solid #A9A9A9;
+	width:610px;
+	 
+}
+
+.nav2 a ,
+.nav2 ul a{
+ 
+	color:black;
+}
+
+
+.nav2{
+	padding:10px;
+}
+.nav2 li,
+.nav2 li li{
+	list-style: none;
+	padding-right:0.5em;
+	padding-left:0;
+	margin-right:30px;
+ 
+}
+
+
+.nav2 li {
+	float: left; /* CSS中float:left 表示向左浮动，比如多个div在一个页面上，默认情况是：一行一个div，
+	                但是只要在div的css中使用float：left，可以使一行有多个div，这样可以把网页划分成很多块，
+					但是使用该属性会影响后面的元素，所有如果后面的div不想再被影响，可以使用clear:both；
+					可以理解为清除float:left和float:right的影响，返回到默认状态。像<ul><li></li></ul>也可以这么使用，
+					做导航菜单基本上有这个元素,使用float:left使其横向显示。*/		
+	width: 5em;	
+}
+
+.nav2 li a:hover,
+.nav2 li:hover > a {
+	color: #9370D8;  /* 被下拉连接点击时为蓝色*/
+}
+
+.nav2 .submenu2 {
+	margin-left: -10px;
+	padding-top: 5px;
+	padding-left:10px;
+	padding-right:5px;
+	padding-bottom:10px;
+
+	 	left: -999em;/* 默认隐藏子菜单画面以外的所以游客看不到它 */
+	position: absolute;
+	z-index: 1000;
+}
+
+.nav2 li:hover .submenu2 {
+	display: block; /* for older versions of IE  旧版本IE */
+	left: auto; /* 显示子菜单,当鼠标停留在父元素上时，让子菜单回到自然状态 */
+}
+
+ .nav2 li:active .submenu2 {
+	display: block; /* for older versions of IE  旧版本IE */
+	/* left: auto; 显示子菜单,当鼠标停留在父元素上时，让子菜单回到自然状态 */
+}
+
+
+.a{
+	margin-left:-126px;
+}
+.b{
+	margin-left:-246px;
+}
+
+.c{
+	margin-left:-363px;
+}
+
+.d{
+	margin-left:-480px;
+}
+
+.aa{
+	font-size:0.8em;
+	background-color: #DCDCDC;
+	border:1px solid #A9A9A9;
+	padding:10px 10px 5px;
+	margin: 0px;
+	width: auto;
+}
+.post2{
+	padding-right:5px;
+}
+
+/*---------------------------------------------------------------------------------*/
+
+aside{
+	display:block;
+ 
+	width:320px;
+	float:right;
+}
+
+footer {
+		display:block;
+	border:1px solid #A9A9A9;
+	float:left;
+	width:960px;
+	margin-top:20px;
+}
+
+.xuebao{
+	float:left;
+	 
+}
+
+.about h3{
+	border-bottom:1px solid #A9A9A9;
+	padding-left:10px;
+	margin-top:5px;
+	font-family:Microsoft YaHei;
+	font-weight:normal;
+	font-size:0.95em;
+	
+}
+.about{
+	border:1px solid #A9A9A9;
+	padding:0 1px 17px;
+	margin-top:10px;
+	margin-bottom:24px;
+	font-family:Microsoft YaHei;
+}
+
+.about p{
+	font-size:0.85em;
+	font-weight:bold;
+	border-left:100px solid white;
+	margin:10px;
+	padding-top:10px;
+}
+
+.about a{
+	padding-left:0px;
+}
+.about a:hover{
+	border-bottom:3px dotted #696969;
+	
+}
+
+.about2{
+	border-left:1px solid #A9A9A9;
+	border-right:1px solid #A9A9A9;
+	width:320px;
+	margin-top:6px;
+ 
+		
+}
+.zzz{
+	border-top:1px solid #A9A9A9;
+	border-bottom:1px solid #A9A9A9;
+	width:320px;	
+}
+
+ /*----------------------------页脚-----------------------------------------------------*/
+
+.footer{
+	background-color:#1A3153;
+}
+ 
+ .about3{
+	 display:block;
+	 width:620px;
+	 color:white;
+	 float:left;
+ }
+ .logo2{
+	 float:left;
+	 margin:30px 20px 20px 0px;
+ }
+ 
+ .legal{
+	 display:block;
+	 float:right;
+	 width:250px;
+ }
+ 
+ .about3 p{
+	 font-size:0.75em;
+	 font-family:Microsoft YaHei;
+ }
+
+ 
+ 
+  .legal{
+	  list-style:none;
+	 font-size:0.8em;
+	 font-family:Microsoft YaHei;	 
+	 margin-top:60px;
+  }
+ 
+ .legal li{
+	   display:inline-block;
+	   border-left:2px solid white;
+	   margin-left:2px;
+	   padding-left:2px;
+ }
+ 
+  .legal li:first-child{
+	   border-left:none; /*课本219页*/
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
