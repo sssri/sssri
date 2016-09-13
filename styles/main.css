@@ -1,0 +1,519 @@
+/*头部样式开始*/
+#header{
+	background-image: url("../images/headerbg.png"); /*设置背景图像*/
+	background-repeat:repeat-x;    /*图像沿水平方向重复*/
+	background-attachment:scroll;  /*滚动鼠标背景图像会移动   见课本P191*/
+	background-position:0 0;         /*背景图像位置：距离水平方向和垂直方向均为0 */
+	background-color:#FFFFFF；        /*背景图像的颜色:白色  */
+    height: 105px;   /*头部的高度*/
+}
+#header .contWidth {
+    position: relative; /*参考课本P230-232，相对定位：相对于原始位置对元素进行移动，相对定位的元素会在原先的位置留下空白，周围的元素完全不受偏移的影响。
+	                                      绝对定位：指定元素相对于body或最近的已定位祖先元素。对于绝对定位的元素，其他元素不会围绕在其周围，实际上，其他元素不知道它的存在。
+	position:absolute; 他的意思是绝对定位，他是参照浏览器的左上角，配合TOP、RIGHT、BOTTOM、LEFT(下面简称TRBL)进行定位，在没有设定TRBL，默认依据父级的做标原始点为原始点。如果设定TRBL并且父级没有设定position属性，那么当前的absolute则以浏览器左上角为原始点进行定位，位置将由TRBL决定。
+	一般来讲，网页居中的话用Absolute就容易出错，因为网页一直是随着分辨率的大小自动适应的，而Absolute则会以浏览器的左上角为原始点，不会应为分辨率的变化而变化位置。很多人出错就在于这点上出错。而网页居左其特性与Relative很相似，但是还是有本质的区别的。
+   relative是相对的意思，顾名思义就是相对于元素本身在文档中应该出现的位置来移动这个元素，可以通过TRBL来移动元素的位置，实际上该元素依然占据文档中原有的位置，只是视觉上相对原来的位置有移动。*/
+    height: 105px;
+    margin: 0 auto; /*margin后面如果只有两个参数的话，第一个表示top和bottom，第二个表示left和right，因为0 auto，表示上下边界为0，左右则根据宽度自适应相同值（即居中）*/
+    width: 990px;
+    z-index: 100; /*显示器是显示的图案是一个二维平面，拥有x轴和y轴来表示位置属性。为了表示三维立体的概念如显示元素的上下层的叠加顺序引入了z-index属性来表示z轴的区别。表示一个元素在叠加顺序上的上下立体关系。
+                    z-index值较大的元素将叠加在z-index值较小的元素之上。对于未指定此属性的定位对象，z-index 值为正数的对象会在其之上，而 z-index 值为负数的对象在其之下。*/
+	  
+}
+#header .logo { 
+	float:left; 
+	margin:0 0 0 10px; 
+	color:#FFF; /*白色*/
+	
+}
+#header .search {
+    left: 400px;
+    position: absolute;
+    margin-top: 20px;
+	 
+}
+.search span a{
+	font-size:18px;
+	font-style:italic;
+	font-weight:bold;
+	}
+#inputSearch {
+    border: 1px solid #BABEBF;/*搜索框边框*/
+    color: #999999; /*搜索框内部字体颜色*/
+    font-size: 14px; /*搜索框内部字体大小*/
+    height: 17px;  /*搜索框高度*/
+    padding: 3px 6px 5px 6px; /*搜索框内边距*/
+    width: 200px; /*搜索框长度*/
+}
+#inputSearch.focus{
+    border: 1px solid #00A5FF;  /*搜索框获得鼠标焦点时，搜索框的边框颜色*/
+}
+
+
+/* 切换皮肤控件样式 */
+#skin { 
+	float:right; 
+	margin:10px; 
+	padding:4px; 
+	width:150px;  
+}
+#skin li { 
+	float:left; /*水平排列*/   
+	margin-right:4px; 
+	width:15px; 
+	height:15px; 
+	text-indent:-9999px; /*text-indent:-9999px；的具体使用方法：把h1作为一个块来显示（display:block;），指定长宽（和图片一样大小），然后指定h1的背景图片，     也就是将我们需要的图片作为h1这个 标签的背景。而h1标签中插入的，仍然是作为字符形式出现的博客标题，然后用text-indent:-9999px;将文字甩到屏幕看不到的地方      。（9999px应该是足够了，谁的屏幕也没那么大吧）*/ 
+	display:block;   
+	cursor:pointer; /*鼠标放上为手形*/
+	background-image:url("../images/theme.gif"); 
+}
+#skin_0 { background-position:0px 0px; }
+#skin_1 { background-position:15px 0px; }
+#skin_2 { background-position:35px 0px; }
+#skin_3 { background-position:55px 0px; }
+#skin_4 { background-position:75px 0px; }
+#skin_5 { background-position:95px 0px; }
+#skin_0.selected { background-position:0px 15px; }
+#skin_1.selected { background-position:15px 15px; }
+#skin_2.selected { background-position:35px 15px; }
+#skin_3.selected { background-position:55px 15px; }
+#skin_4.selected { background-position:75px 15px; }
+#skin_5.selected { background-position:95px 15px; }
+ 
+/*导航样式开始*/
+.mainNav {
+    position: absolute;    
+    top: 68px;
+    left: 0;
+    height: 37px;line-height: 37px;  
+    width: 990px;
+    z-index:100;
+    background-color:  #4A4A4A;
+}  /*上面定义的为导航栏样式*/
+ .mainNav .nav {
+	 display: inline;
+    float: left;
+    margin-left: 25px;  
+}/*上面定义的为导航栏内容的样式*/
+.mainNav .nav li{
+	float:left; 
+    display: inline;
+	margin-right:14px;
+	position: relative ;
+	z-index:100;
+	}
+
+.mainNav .nav li>a{
+	font-size:14px;
+	font-weight:bold;
+	margin-right:2em;
+}
+.mainNav ul li a { 
+	color:#fff;
+}
+
+/* 二级菜单 */
+.subitem{
+	background:#4A4A4A;
+    
+	}
+.subitem{
+	left: -999em; /* 默认隐藏子菜单画面以外的所以游客看不到它 */
+	position: absolute;
+	z-index: 1000;
+	}
+
+.nav li:hover .subitem {
+	display: block; /* for older versions of IE  旧版本IE */
+	left: auto; /* 显示子菜单,当鼠标停留在父元素上时，让子菜单回到自然状态 */
+	width:400px;
+	font-size:14px;
+}
+
+.subitem dl {
+    overflow: hidden;
+    padding: 8px 0;
+	float:left;
+	width:400px;
+}
+.aft{
+	border-top: 1px dashed #C4C4C4;
+	}
+.subitem dt {
+    float: left;
+    font-weight: bold;
+    line-height: 16px;
+    padding: 4px 3px;
+    text-align: center;
+    width: 76px;
+	margin-top:0.5em;
+	margin-bottom:0.6em;
+	font-size:14px;
+}
+
+.subitem dt a{
+    
+	margin:2px;
+}
+
+.subitem em {
+    border-right: 1px solid #CCCCCC;
+	padding-right:3px;
+	padding-left:2px;
+	font-size:12px; 
+}
+
+/* 主体样式 */
+#content{
+    clear: left;
+    margin: 0 auto;
+    position: relative; 
+    width: 990px;
+}
+.caochangkuishop{
+    height: 560px;
+    
+    padding: 10px 0;
+}
+
+/* 商品分类 */
+#jnCatalog{
+    float: left;
+    height: 560px;
+    margin: 0 11px 0 0;
+  overflow: hidden;
+    width: 187px;
+}
+#jnCatalog h2{
+	height:30px;
+	line-height:30px;
+	color:#fff;
+	font-size:12px;
+	text-indent:13px; /*首行缩进*/
+	background-color:#6E6E6E;
+}
+.jnCatinfo{
+    border: 1px solid #6E6E6E;
+    border-style: none solid solid; /*边框：上边无格式，左右下边格式为实线*/
+    border-width: 0 1px 1px;
+    height: 524px;
+    overflow: hidden;
+    padding: 5px 10px 0;
+    width: 165px;
+}
+.jnCatinfo h3 {
+    border-bottom: 1px solid #EEEEEE;
+    height: 24px;
+	line-height:24px;
+    width: 164px;
+}
+.jnCatinfo ul{
+	 
+    padding: 0 2px 8px;
+	width: 164px;
+	 padding-top:16px;
+	}
+.jnCatinfo ul li{
+	 height: 24px;
+	 width: 79px;  
+	 display:inline-block;
+	}
+.jnCatinfo li a{
+    color: #444444;
+}
+.jnCatinfo li a:hover{
+    color: #008CD7;
+    text-decoration: none;
+}
+.jnCatinfo li a.promoted1{
+	color:#F9044E;
+	 background: url("../images/hot.gif") no-repeat scroll 50px -1px transparent/*透明的*/;  
+	 padding-right:24px;
+}
+.jnCatinfo li a.promoted2{
+	color:#F9044E; 
+	background: url("../images/hot.gif") no-repeat scroll 26px -1px transparent/*透明的*/;  
+	 padding-right:24px;
+}
+.jnCatinfo li .hot {
+    background: url("../images/hot.gif") no-repeat scroll 0 0 transparent/*透明的*/;
+    height: 16px;
+    position: absolute;
+    top: 0;
+    width: 21px;
+}
+
+/* 大屏广告 */
+#jnImageroll {
+    float: left;
+    height: 320px;
+	width: 550px;
+    margin: 0 11px 0 0;
+    overflow: hidden;
+    position: relative;
+}
+#jnImageroll img {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#jnImageroll div {
+	bottom: 0;   
+    overflow: hidden;
+    position: absolute;
+    float: left;
+}
+#jnImageroll div a {
+    background-color: #444444;
+    color: #FFFFFF;
+    display: inline-block;
+    float: left;
+    height: 32px;
+    margin-right: 1px;
+    overflow: hidden;
+    padding: 5px 15px;
+    text-align: center;
+    width: 79px;
+}
+#jnImageroll div a:hover {
+    text-decoration: none;
+}
+#jnImageroll div a em {
+    cursor: pointer;
+    display: block;
+    height: 18px;
+    overflow: hidden;
+    width: 79px;
+}
+#jnImageroll .last {
+    margin: 0;
+    width: 80px;
+}
+#jnImageroll a.chos {
+    background:  #37A7D7;
+    color: #FFFFFF;
+}
+
+/* 最新动态 */
+#jnNotice{
+    float: left;
+    height: 321px; 
+    overflow: hidden;
+    width: 230px;
+}
+#miaosha{
+    float: left;
+    height: 176px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    width: 230px;
+}
+.JS_css3 img {
+	-webkit-transition:1s all;
+	-moz-transition:1s all;
+	-o-transition:1s all;
+	transition:1s all;
+}
+.JS_css3:hover img {
+	-webkit-transform:rotate(720deg);
+	-moz-transform:rotate(720deg);
+	-o-transform:rotate(720deg);
+	transform:rotate(720deg);
+}
+#noticeInfo{
+    float: left;
+    border: 1px solid #DFDFDF;
+    height: 133px;
+    overflow: hidden;
+    width: 228px;
+}
+#noticeInfo h2{
+    height: 23px;
+    line-height: 23px;
+    border-bottom: 1px solid #DFDFDF;
+	text-indent:12px;
+}
+#noticeInfo ul{
+    float: left;
+    padding: 6px 2px 0 12px;
+}
+#noticeInfo li{
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+}
+#noticeInfo li a{
+	color:#666666;
+}
+#noticeInfo li a:hover{
+    color: #008CD7;
+    text-decoration: none;
+}
+
+/* tooltip 右侧最新动态的提示效果*/
+#tooltip{
+	position:absolute;
+	border:1px solid #333;
+	background:#f7f5d1;
+	padding:1px;
+	color:#333;
+	display:none;
+}
+
+/* 品牌活动 */
+#brand {
+    float: left;
+    height: 230px;
+    margin: 10px 0 0;
+       
+    width: 790px;
+}
+#brandTab {
+    border-bottom: 1px solid #E4E4E4;
+    height: 29px;
+    position: relative;
+    width: 790px;
+    float: left;
+}
+#brandTab h2 {
+    height: 29px;
+    line-height: 29px;
+    left: 0;
+    position: absolute;
+    width: 100px;
+}
+#brandTab ul {
+    position: absolute;  
+    right: 0;
+    top: 10px;
+}
+#brandTab li {
+    float: left; 
+    margin: 0 10px 0 0;
+}
+#brandTab li a {
+    background-color: #E4E4E4;
+    color: #000000;
+    display: inline-block; /*float:left是让元素浮动在左边而已，元素的占位属性还是块级属性，height属性还是有效。
+                             display:inline是让元素的占位属性变成内联属性，height无效。*/
+    height: 20px;
+    line-height: 20px;
+    padding: 0 10px;
+}
+#brandTab .chos {
+    background: url("../images/chos.gif") no-repeat scroll 50% bottom transparent;
+    padding-bottom: 3px;
+}
+#brandTab .chos a {
+    background-color: #FA5889;
+    color: #FFFFFF;
+    outline: 0 none;
+}
+#brandContent{
+	float: left;
+    height: 188px;            
+     overflow: hidden;
+    margin: 8px 5px;
+    width: 790px;
+	position: relative;
+}
+#jnBrandList {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3200px;  
+}
+#jnBrandList li {
+    float: left;
+    height: 188px;   
+     overflow: hidden;
+    padding: 0 5px;
+   position: relative;
+    width: 185px;
+}
+#brandContent li img {
+    left: 5px;
+    position: absolute;
+    top: 0;
+}
+#brandContent li span {
+	 
+    position: absolute;  /*所有部分内容被隐藏不显示，可以用此方法显示出来*/
+     background-color: #EFEFEF;
+    bottom: 0;
+    color: #666666;
+    display: inline-block;
+    font-size: 14px;
+    height: 24px;
+    line-height: 24px;
+    overflow: hidden;
+    text-align: center;
+    width: 183px;
+}
+#brandContent li a {
+	color:#666666;
+}
+#brandContent li a:hover{
+    color: #008CD7;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

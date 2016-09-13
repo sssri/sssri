@@ -1,0 +1,77 @@
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{
+	margin:0;
+	padding:0;
+	}
+body,button,input,select,textarea{
+	font-size: 12px; /*字体大小*/
+    line-height: 1.5; /*设置行高*/
+    font-family: tahoma,arial,\5b8b\4f53;/*tahoma   大河马字体，Tahoma为Windows操作系统的英文默认字型。Tahoma是种非常圆滑的字体。这个字体比较均衡，中英文混排显示时，不会出现中英文不对齐的状态。
+    arial 是一套随同多套微软应用软件所分发的无衬线体TrueType字型
+    sans-serif  表示是无衬线字体，是一种通用字体族。
+    "\5b8b\4f53″ 就是 “宋体”。用 unicode 表示，不用 SimSun, 是因为 Firefox 的某些版本和 Opera 不支持 SimSun 的写法。注释乱码：强烈建议不要用中文注释。font-family:’宋体’
+    为了方便大家好查，整理了些中文名 Unicode，特此献给其他前端开发的朋友们
+    新细明体 \65B0\7EC6\660E\4F53
+    细明体 \7EC6\660E\4F53
+    标楷体 \6807\6977\4F53
+    黑体 \9ED1\4F53
+    宋体 \5B8B\4F53
+    新宋体 \65B0\5B8B\4F53
+    仿宋 \4EFF\5B8B
+    楷体 \6977\4F53
+    仿宋_GB2312 \4EFF\5B8B_GB2312
+    楷体_GB2312 \6977\4F53_GB2312
+     微软正黑体 \5FAE\x8F6F\6B63\9ED1\4F53
+    微软雅黑 \5FAE\8F6F\96C5\9ED1*/
+	}
+h1,h2,h3,h4,h5,h6{
+	font-size:100%; /*浏览器在给 hx 标题元素设定默认样式时，使用的是 h1 {font-size: 200%;} h2 {font-size: 150%;} 等等这样的规则来设定字体大小。浏览器通过这些样式来确保各级标题文本可以与普通文本呈现字体大小的固定比例关系。
+	假如你设置body{font-size:12px;}
+    但h1是不会继承这个12px，它会按照一定百分比增加字号，但如果给h1显示指定font-size:100%;它就会继承body设定的字体大小。
+    1. 它改变了默认的大小。
+    2. 这些元素本身不会继承父体的字体大小，设置了font-size:100%后就能自动继承。*/
+	}
+address,cite,dfn,em,var{
+	font-style:normal;
+	}
+code,kbd,pre,samp{
+	font-family:courier new,courier,monospace;
+	}
+small{
+	font-size:12px;
+	}
+ul,ol{
+	list-style:none;
+	}
+a{
+	text-decoration:none;
+	}
+a:hover{
+	text-decoration:underline;
+	}
+sup{
+	vertical-align:text-top;
+	}
+sub{
+	vertical-align:text-bottom;
+	}
+legend{
+	color:#000; /*黑色*/
+	}
+fieldset,img{
+	border:0;
+	}
+button,input,select,textarea{
+	font-size:100%;
+	}
+table{
+	border-collapse:collapse;
+	border-spacing:0;
+	}
+.clear{
+	clear: both;
+	float: none;
+	height: 0;
+	overflow: hidden;}
+html .hide{
+	display:none;
+	}
